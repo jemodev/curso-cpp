@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 
 const topics = [
   {
@@ -210,6 +211,7 @@ const flowSteps = [
 ]
 
 export default function Home() {
+  const router = useRouter()
   const [isVisible, setIsVisible] = useState(false)
   const [activeCard, setActiveCard] = useState<string | null>(null)
   const [unlockedSteps, setUnlockedSteps] = useState<number[]>([0])
@@ -527,6 +529,15 @@ export default function Home() {
                 style={{ animationDelay: `${index * 150}ms` }}
                 onMouseEnter={() => setActiveCard(topic.id)}
                 onMouseLeave={() => setActiveCard(null)}
+                onClick={() => {
+                  if (topic.id === "recursividad") {
+                    router.push("/recursividad")
+                  } else if (topic.id === "structs") {
+                    router.push("/structs")
+                  } else if (topic.id === "punteros") {
+                    router.push("/punteros")
+                  }
+                }}
               >
                 {/* Image Header */}
                 <div className="relative h-32 overflow-hidden">
