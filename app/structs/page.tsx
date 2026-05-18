@@ -26,17 +26,17 @@ export default function StructsPage() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/60 to-slate-950" />
+          <div className="absolute inset-0 bg-linear-to-b from-slate-950/20 via-slate-950/60 to-slate-950" />
         </div>
         <div className="relative mx-auto max-w-5xl px-4 py-16">
-          <Link 
+          <Link
             href="/"
             className="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 transition-colors mb-8 group"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Volver al inicio
           </Link>
-          
+
           <div className={`transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
             <div className="flex items-center gap-3 mb-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400">
@@ -44,7 +44,7 @@ export default function StructsPage() {
               </div>
               <Badge className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20">Estructuras de Datos</Badge>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl mb-4 bg-gradient-to-r from-white via-emerald-100 to-emerald-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl mb-4 bg-linear-to-r from-white via-emerald-100 to-emerald-400 bg-clip-text">
               Structs: Empaquetando la Realidad
             </h1>
             <p className="max-w-2xl text-xl text-slate-400 border-l-4 border-emerald-500/50 pl-4">
@@ -55,7 +55,7 @@ export default function StructsPage() {
       </header>
 
       <main className="mx-auto max-w-5xl px-4 py-12 space-y-16">
-        
+
         {/* Intro */}
         <section className={`transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
           <div className="flex gap-4 items-start">
@@ -97,7 +97,7 @@ export default function StructsPage() {
                 <li className="flex items-center gap-2 text-slate-400"><CheckCircle2 className="h-5 w-5 text-emerald-500" /> Accedemos a los datos internos usando el "Punto" (<code className="text-emerald-400 font-bold">.</code>).</li>
               </ul>
             </div>
-            
+
             <Card className="bg-slate-900 border-slate-800 overflow-hidden">
               <div className="bg-slate-950 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -250,7 +250,7 @@ export default function StructsPage() {
             </div>
             <h2 className="text-2xl font-bold text-white">Reto Propuesto</h2>
           </div>
-          
+
           <Card className="bg-slate-900/80 border-slate-700 hover:border-emerald-500/50 transition-colors backdrop-blur-sm">
             <CardHeader>
               <Badge variant="outline" className="w-fit text-emerald-400 border-emerald-500/30 mb-2">Desafío Estructural</Badge>
@@ -258,8 +258,8 @@ export default function StructsPage() {
             </CardHeader>
             <CardContent className="text-slate-400">
               <p className="mb-4">
-                Diseña un <code>struct</code> llamado <code>Item</code> que tenga: 
-                nombre (string), peso (float), y cantidad (int). 
+                Diseña un <code>struct</code> llamado <code>Item</code> que tenga:
+                nombre (string), peso (float), y cantidad (int).
                 Luego crea un arreglo de 5 items y escribe un ciclo que sume el peso total del inventario.
               </p>
               <div className="bg-slate-950 p-3 rounded text-sm font-mono border border-slate-800">

@@ -26,17 +26,17 @@ export default function PunterosPage() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/60 to-slate-950" />
+          <div className="absolute inset-0 bg-linear-to-b from-slate-950/20 via-slate-950/60 to-slate-950" />
         </div>
         <div className="relative mx-auto max-w-5xl px-4 py-16">
-          <Link 
+          <Link
             href="/"
             className="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 transition-colors mb-8 group"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Volver al inicio
           </Link>
-          
+
           <div className={`transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
             <div className="flex items-center gap-3 mb-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400">
@@ -44,7 +44,7 @@ export default function PunterosPage() {
               </div>
               <Badge className="bg-amber-500/10 text-amber-400 border-amber-500/20">Manejo de Memoria</Badge>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl mb-4 bg-gradient-to-r from-white via-amber-100 to-amber-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl mb-4 bg-linear-to-r from-white via-amber-100 to-amber-400 bg-clip-text">
               Punteros y Memoria
             </h1>
             <p className="max-w-2xl text-xl text-slate-400 border-l-4 border-amber-500/50 pl-4">
@@ -55,7 +55,7 @@ export default function PunterosPage() {
       </header>
 
       <main className="mx-auto max-w-5xl px-4 py-12 space-y-16">
-        
+
         {/* Intro */}
         <section className={`transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
           <div className="flex gap-4 items-start">
@@ -67,7 +67,7 @@ export default function PunterosPage() {
               <p className="text-lg leading-relaxed text-slate-300 mb-4">
                 Un puntero es una variable especial que no guarda un valor (como 5 o "Hola"), sino que <strong className="text-amber-400">guarda una dirección de memoria</strong>. Es como tener un papel que dice "La información está en el casillero #42".
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-4 mt-6">
                 <div className="bg-slate-900 border border-slate-800 rounded-lg p-4">
                   <h3 className="font-bold text-slate-200 mb-2 flex items-center gap-2">
@@ -195,7 +195,7 @@ export default function PunterosPage() {
 
         {/* C++ Moderno */}
         <section className={`transition-all duration-700 delay-600 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
-          <div className="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-8 relative overflow-hidden">
+          <div className="bg-linear-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-8 relative overflow-hidden">
             <div className="flex items-center gap-3 mb-6">
               <ShieldCheck className="h-8 w-8 text-blue-400" />
               <h2 className="text-2xl font-bold text-white">C++ Moderno: Punteros Inteligentes</h2>

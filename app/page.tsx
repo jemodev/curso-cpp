@@ -254,22 +254,21 @@ export default function Home() {
             className="object-cover opacity-30"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/70 to-slate-950" />
+          <div className="absolute inset-0 bg-linear-to-b from-slate-950/50 via-slate-950/70 to-slate-950" />
         </div>
         <div
-          className={`relative mx-auto max-w-7xl px-4 py-16 transition-all duration-1000 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`relative mx-auto max-w-7xl px-4 py-16 transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/20 text-cyan-400 font-mono text-xl font-bold animate-pulse">
               {"C++"}
             </div>
-            <div className="h-px flex-1 bg-gradient-to-r from-cyan-500/50 to-transparent" />
+            <div className="h-px flex-1 bg-linear-to-r from-cyan-500/50 to-transparent" />
           </div>
           <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
             Prerrequisitos en{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               C++
             </span>
           </h1>
@@ -282,9 +281,8 @@ export default function Home() {
       <main className="mx-auto max-w-7xl px-4 py-12">
         {/* Fundamentals Section - Cascading Steps */}
         <section
-          className={`mb-16 transition-all duration-700 delay-200 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`mb-16 transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <div className="mb-6 flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
@@ -306,7 +304,7 @@ export default function Home() {
 
           <div className="relative">
             {/* Connection Line */}
-            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500/50 via-slate-700 to-slate-800 md:left-8" />
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-linear-to-b from-cyan-500/50 via-slate-700 to-slate-800 md:left-8" />
 
             {/* Cascading Steps */}
             <div className="space-y-4">
@@ -319,25 +317,22 @@ export default function Home() {
                 return (
                   <div
                     key={index}
-                    className={`relative pl-14 md:pl-20 transition-all duration-500 ${
-                      isUnlocked ? "opacity-100" : isNext ? "opacity-50" : "opacity-20"
-                    }`}
+                    className={`relative pl-14 md:pl-20 transition-all duration-500 ${isUnlocked ? "opacity-100" : isNext ? "opacity-50" : "opacity-20"
+                      }`}
                     style={{ transitionDelay: `${index * 50}ms` }}
                   >
                     {/* Step Number Circle */}
                     <button
                       onClick={() => handleStepClick(index)}
                       disabled={!isUnlocked}
-                      className={`absolute left-0 top-0 flex h-12 w-12 md:h-16 md:w-16 items-center justify-center rounded-2xl border-2 transition-all duration-500 ${
-                        isUnlocked
+                      className={`absolute left-0 top-0 flex h-12 w-12 md:h-16 md:w-16 items-center justify-center rounded-2xl border-2 transition-all duration-500 ${isUnlocked
                           ? `${colors.border} ${colors.bg}/20 hover:scale-110 cursor-pointer`
                           : "border-slate-700 bg-slate-800/50 cursor-not-allowed"
-                      } ${isExpanded ? `scale-110 ${colors.glow} shadow-xl` : ""}`}
+                        } ${isExpanded ? `scale-110 ${colors.glow} shadow-xl` : ""}`}
                     >
                       <span
-                        className={`font-mono text-lg md:text-xl font-bold transition-colors ${
-                          isUnlocked ? colors.text : "text-slate-600"
-                        }`}
+                        className={`font-mono text-lg md:text-xl font-bold transition-colors ${isUnlocked ? colors.text : "text-slate-600"
+                          }`}
                       >
                         {item.icon}
                       </span>
@@ -345,36 +340,32 @@ export default function Home() {
 
                     {/* Step Card */}
                     <Card
-                      className={`border transition-all duration-500 overflow-hidden ${
-                        isUnlocked
+                      className={`border transition-all duration-500 overflow-hidden ${isUnlocked
                           ? `${colors.border} bg-slate-900/70 hover:bg-slate-900/90 cursor-pointer`
                           : "border-slate-800 bg-slate-900/30"
-                      } ${isExpanded ? `${colors.glow} shadow-xl` : ""}`}
+                        } ${isExpanded ? `${colors.glow} shadow-xl` : ""}`}
                       onClick={() => isUnlocked && handleStepClick(index)}
                     >
                       <CardHeader className="pb-2">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
                             <span
-                              className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${
-                                isUnlocked ? `${colors.bg} text-white` : "bg-slate-700 text-slate-400"
-                              }`}
+                              className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${isUnlocked ? `${colors.bg} text-white` : "bg-slate-700 text-slate-400"
+                                }`}
                             >
                               {index + 1}
                             </span>
                             <CardTitle
-                              className={`text-lg transition-colors ${
-                                isUnlocked ? colors.text : "text-slate-500"
-                              }`}
+                              className={`text-lg transition-colors ${isUnlocked ? colors.text : "text-slate-500"
+                                }`}
                             >
                               {item.name}
                             </CardTitle>
                           </div>
                           {isUnlocked && (
                             <svg
-                              className={`h-5 w-5 transition-transform duration-300 ${colors.text} ${
-                                isExpanded ? "rotate-180" : ""
-                              }`}
+                              className={`h-5 w-5 transition-transform duration-300 ${colors.text} ${isExpanded ? "rotate-180" : ""
+                                }`}
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -390,9 +381,8 @@ export default function Home() {
 
                       {/* Expandable Content */}
                       <div
-                        className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                          isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                        }`}
+                        className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                          }`}
                       >
                         <CardContent className="pt-0 pb-4">
                           <div className={`h-px w-full ${colors.bg}/30 mb-4`} />
@@ -453,7 +443,7 @@ export default function Home() {
             {/* Completion Badge */}
             {unlockedSteps.length === fundamentals.length && (
               <div className="mt-8 flex justify-center">
-                <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 px-6 py-4 animate-pulse">
+                <div className="flex items-center gap-3 rounded-2xl bg-linear-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 px-6 py-4 animate-pulse">
                   <svg className="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                   </svg>
@@ -469,9 +459,8 @@ export default function Home() {
 
         {/* Animated Flow Diagram */}
         <section
-          className={`mb-16 transition-all duration-700 delay-400 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`mb-16 transition-all duration-700 delay-400 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <div className="mb-6 flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/20">
@@ -487,7 +476,7 @@ export default function Home() {
               <div className="absolute -left-4 top-1/2 h-32 w-32 rounded-full bg-cyan-500/5 blur-3xl animate-pulse" />
               <div className="absolute -right-4 top-1/2 h-32 w-32 rounded-full bg-indigo-500/5 blur-3xl animate-pulse delay-500" />
             </div>
-            
+
             <div className="relative flex flex-wrap items-center justify-center gap-4">
               {flowSteps.map((step, index) => (
                 <div key={step.label} className="flex items-center gap-4">
@@ -508,9 +497,8 @@ export default function Home() {
 
         {/* Topics Grid with Images */}
         <section
-          className={`transition-all duration-700 delay-600 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`transition-all duration-700 delay-600 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <div className="mb-8 flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/20">
@@ -520,7 +508,7 @@ export default function Home() {
             </div>
             <h2 className="text-2xl font-semibold text-slate-200">Prerrequisitos por Tema</h2>
           </div>
-          
+
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {topics.map((topic, index) => (
               <Card
@@ -545,22 +533,19 @@ export default function Home() {
                     src={topic.image}
                     alt={topic.title}
                     fill
-                    className={`object-cover transition-all duration-700 ${
-                      activeCard === topic.id ? "scale-110" : "scale-100"
-                    }`}
+                    className={`object-cover transition-all duration-700 ${activeCard === topic.id ? "scale-110" : "scale-100"
+                      }`}
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-900`} />
-                  <div className={`absolute bottom-0 left-0 right-0 h-1 ${topic.color} transition-all duration-300 ${
-                    activeCard === topic.id ? "opacity-100" : "opacity-50"
-                  }`} />
+                  <div className={`absolute inset-0 bg-linear-to-b from-transparent via-slate-900/50 to-slate-900`} />
+                  <div className={`absolute bottom-0 left-0 right-0 h-1 ${topic.color} transition-all duration-300 ${activeCard === topic.id ? "opacity-100" : "opacity-50"
+                    }`} />
                 </div>
 
                 <CardHeader className="pb-2 pt-4">
                   <div className="flex items-center gap-3">
                     <div
-                      className={`h-3 w-3 rounded-full ${topic.color} transition-all duration-300 ${
-                        activeCard === topic.id ? "scale-125 animate-pulse" : ""
-                      }`}
+                      className={`h-3 w-3 rounded-full ${topic.color} transition-all duration-300 ${activeCard === topic.id ? "scale-125 animate-pulse" : ""
+                        }`}
                     />
                     <CardTitle className={`text-lg ${topic.textColor} transition-colors`}>
                       {topic.title}
@@ -568,7 +553,7 @@ export default function Home() {
                   </div>
                   <p className="text-xs text-slate-500 mt-1">{topic.description}</p>
                 </CardHeader>
-                
+
                 <CardContent className="pt-2">
                   <p className="mb-3 text-xs font-medium uppercase tracking-wider text-slate-500">
                     Debes dominar:
@@ -577,15 +562,13 @@ export default function Home() {
                     {topic.prerequisites.map((prereq, prereqIndex) => (
                       <li
                         key={prereqIndex}
-                        className={`flex items-start gap-2 text-sm text-slate-400 transition-all duration-300 ${
-                          activeCard === topic.id ? "translate-x-1 text-slate-300" : ""
-                        }`}
+                        className={`flex items-start gap-2 text-sm text-slate-400 transition-all duration-300 ${activeCard === topic.id ? "translate-x-1 text-slate-300" : ""
+                          }`}
                         style={{ transitionDelay: `${prereqIndex * 50}ms` }}
                       >
                         <span
-                          className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${topic.color} transition-all duration-300 ${
-                            activeCard === topic.id ? "scale-125" : ""
-                          }`}
+                          className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${topic.color} transition-all duration-300 ${activeCard === topic.id ? "scale-125" : ""
+                            }`}
                         />
                         {prereq}
                       </li>
@@ -599,11 +582,10 @@ export default function Home() {
 
         {/* Dependencies Note with Animation */}
         <section
-          className={`mt-16 transition-all duration-700 delay-800 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`mt-16 transition-all duration-700 delay-800 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
-          <Card className="relative overflow-hidden border-cyan-500/30 bg-gradient-to-br from-cyan-950/30 to-slate-900/50">
+          <Card className="relative overflow-hidden border-cyan-500/30 bg-linear-to-br from-cyan-950/30 to-slate-900/50">
             <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-cyan-500/5 blur-3xl" />
             <CardContent className="relative p-6">
               <div className="flex items-start gap-4">
@@ -667,9 +649,8 @@ function FlowItem({
 }) {
   return (
     <div
-      className={`flex items-center gap-2 rounded-xl bg-slate-800/80 px-5 py-3 shadow-lg transition-all duration-500 hover:scale-110 hover:shadow-xl ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-      }`}
+      className={`flex items-center gap-2 rounded-xl bg-slate-800/80 px-5 py-3 shadow-lg transition-all duration-500 hover:scale-110 hover:shadow-xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+        }`}
       style={{ transitionDelay: `${delay + 600}ms` }}
     >
       <div className={`h-3 w-3 rounded-full ${color} animate-pulse`} />
@@ -681,9 +662,8 @@ function FlowItem({
 function AnimatedArrow({ delay, isVisible }: { delay: number; isVisible: boolean }) {
   return (
     <div
-      className={`transition-all duration-500 ${
-        isVisible ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"
-      }`}
+      className={`transition-all duration-500 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"
+        }`}
       style={{ transitionDelay: `${delay + 600}ms` }}
     >
       <svg

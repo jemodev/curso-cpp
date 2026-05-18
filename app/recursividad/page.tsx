@@ -26,17 +26,17 @@ export default function RecursividadPage() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/60 to-slate-950" />
+          <div className="absolute inset-0 bg-linear-to-b from-slate-950/20 via-slate-950/60 to-slate-950" />
         </div>
         <div className="relative mx-auto max-w-5xl px-4 py-16">
-          <Link 
+          <Link
             href="/"
             className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors mb-8 group"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Volver al inicio
           </Link>
-          
+
           <div className={`transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
             <div className="flex items-center gap-3 mb-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400">
@@ -44,7 +44,7 @@ export default function RecursividadPage() {
               </div>
               <Badge className="bg-blue-500/10 text-blue-400 border-blue-500/20">Concepto Avanzado</Badge>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl mb-4 bg-gradient-to-r from-white via-blue-100 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl mb-4 bg-linear-to-r from-white via-blue-100 to-blue-400 bg-clip-text">
               Introducción a la Recursividad
             </h1>
             <p className="max-w-2xl text-xl text-slate-400 border-l-4 border-blue-500/50 pl-4">
@@ -55,7 +55,7 @@ export default function RecursividadPage() {
       </header>
 
       <main className="mx-auto max-w-5xl px-4 py-12 space-y-16">
-        
+
         {/* Intro */}
         <section className={`transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
           <div className="flex gap-4 items-start">
@@ -84,7 +84,7 @@ export default function RecursividadPage() {
                 Abre una muñeca y encontrarás una más pequeña adentro (<strong className="text-purple-400 font-medium">paso recursivo</strong>). Repites esto hasta llegar a la muñeca sólida que no se abre más (<strong className="text-purple-400 font-medium">caso base</strong>).
               </CardContent>
             </Card>
-            
+
             <Card className="bg-slate-900/50 border-amber-500/20 hover:border-amber-500/40 transition-colors">
               <CardHeader className="pb-2">
                 <Users className="h-8 w-8 text-amber-400 mb-2" />
@@ -94,7 +94,7 @@ export default function RecursividadPage() {
                 ¿En qué fila estás? Le preguntas al de adelante. Él al siguiente. Al llegar a la primera fila (<strong className="text-amber-400 font-medium">caso base</strong>), la respuesta viaja de vuelta sumando 1 por persona.
               </CardContent>
             </Card>
-            
+
             <Card className="bg-slate-900/50 border-cyan-500/20 hover:border-cyan-500/40 transition-colors">
               <CardHeader className="pb-2">
                 <Wand2 className="h-8 w-8 text-cyan-400 mb-2" />
@@ -123,7 +123,7 @@ export default function RecursividadPage() {
                 <p className="text-slate-400">La parte del código donde la función se llama a <strong className="text-slate-200">sí misma</strong> pero con un problema un paso más pequeño.</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-slate-900/50 border-rose-500/20 hover:border-rose-500/50 transition-colors">
               <CardHeader>
                 <div className="text-4xl font-black text-rose-500/20 mb-2">02</div>
@@ -178,7 +178,7 @@ export default function RecursividadPage() {
         </section>
 
         {/* Call Stack */}
-        <section className={`bg-gradient-to-br from-indigo-950/40 to-slate-900 border border-indigo-500/20 rounded-2xl p-8 relative overflow-hidden transition-all duration-700 delay-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+        <section className={`bg-linear-to-br from-indigo-950/40 to-slate-900 border border-indigo-500/20 rounded-2xl p-8 relative overflow-hidden transition-all duration-700 delay-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
           <div className="absolute top-0 right-0 p-12 opacity-10">
             <Layers className="w-64 h-64" />
           </div>
@@ -203,7 +203,7 @@ export default function RecursividadPage() {
                   <div className="text-slate-600">[ cuentaRegresiva(2) ] <span className="text-slate-600 text-xs ml-2">← pausada</span></div>
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="font-semibold text-indigo-300 mb-4 flex items-center gap-2">
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-500/20 text-xs text-indigo-400">2</span>
@@ -347,12 +347,12 @@ export default function RecursividadPage() {
             </div>
             <h2 className="text-2xl font-bold text-white">Pon a prueba tu mente: Retos</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-6 relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
               <Target className="w-64 h-64" />
             </div>
-            
+
             <Card className="bg-slate-900/80 border-slate-700 hover:border-emerald-500/50 transition-colors z-10 backdrop-blur-sm group">
               <CardHeader>
                 <div className="flex justify-between items-start">
